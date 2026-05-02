@@ -33,14 +33,39 @@ addBtn.addEventListener("click", () => {
     formModal.classList.toggle("show");
 });
 
+
+function showToast(message) {
+    const toast = document.createElement("div");
+    toast.textContent = message;
+    toast.classList.add("toast");
+
+    document.body.appendChild(toast);
+
+    setTimeout(() => {
+        toast.classList.add("show");
+    }, 10);
+
+    setTimeout(() => {
+        toast.classList.remove("show");
+        setTimeout(() => toast.remove(), 300);
+    }, 2500);
+}
+
 submitBtn.addEventListener("click", (event)=> {
     event.preventDefault();
+    const pagesNum = Number(pages.value);
+
+    if(title.value == "" || author.value == "" || pages.value == "" || !Number.isInteger(pagesNum)){
+        showToast("Invlaid Data Input or Data Empty!");
+        return;
+    }
     addBookToLibrary(title.value, author.value, pages.value, read.checked);
     title.value = "";
     author.value = "";
     pages.value = ""
     read.checked = false;
     formModal.classList.toggle("show");
+    showToast("Book Added Successfully!");
 })
 
 const container = document.querySelector(".main-container");
@@ -89,6 +114,8 @@ function createBook(book){
         remove.addEventListener("click", ()=>{
             library = library.filter((b)=> b.id !== book.id);
             renderUi();
+    showToast("Book Removed Successfully!");
+
         });
         card.append(title, author, pages, div, remove);
 
@@ -98,8 +125,12 @@ function createBook(book){
 function renderUi(){
     container.innerHTML = "";
     if(library.length === 0){
+        container.textContent = "Library is empty, use Add Book to fill up your library!";
+        container.classList.add("empty");
         return;
     }
+
+    container.classList.remove("empty");
     library.forEach((book)=> {
         container.appendChild(createBook(book));
     });

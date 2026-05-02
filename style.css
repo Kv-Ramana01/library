@@ -1,120 +1,121 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-:root{
-    --bg: lightgrey;
-    --surface: rgb(23, 85, 255);
-    --text: white;
+:root {
+  --bg: lightgrey;
+  --surface: rgb(23, 85, 255);
+  --text: white;
 }
 
-html{
-    font-size:16px;
+html {
+  font-size: 16px;
 }
 
-.library-container{
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
+.library-container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
-.header{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem;
-    height: auto;
-    background-color: var(--bg) ;
-    box-shadow: 0 8px 12px rgba(0,0,0,0.08);
-    position: sticky;
-    top: 0;
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  height: auto;
+  background-color: var(--bg);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.08);
+  position: sticky;
+  top: 0;
 }
 
-.header h3{
-    font-size: 2rem;
+.header h3 {
+  font-size: 2rem;
 }
 
-.header button{
-    border: 0;
-    outline: 0;
-    width: 100px;
-    height: 40px;
-    border-radius: 8px;
-    background: var(--surface);
-    color: var(--text);
-    transition: all 0.25s ease;
-    font-size: 1.1rem;
-    font-weight: 700;
+.header button {
+  border: 0;
+  outline: 0;
+  width: 100px;
+  height: 40px;
+  border-radius: 8px;
+  background: var(--surface);
+  color: var(--text);
+  transition: all 0.25s ease;
+  font-size: 1.1rem;
+  font-weight: 700;
 }
 
-.header button:hover{
-    transform: translateX(-8px) scale(1.04);
+.header button:hover {
+  transform: translateX(-8px) scale(1.04);
 }
 
-.main-container{
-    padding: 1rem;
+.main-container {
+  padding: 1rem;
 }
 
-.card{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
-    padding: 1rem;
-    overflow-y: auto;
-    gap: 20px;
-    background-color: var(--bg);
-    border-radius: 6px;
-    box-shadow: 0 0 12px rgba(0,0,0,0.19);
-    border: 2px solid transparent;
-    transition: all 0.25s ease;
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  padding: 1rem;
+  overflow-y: auto;
+  gap: 20px;
+  background-color: var(--bg);
+  border-radius: 6px;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.19);
+  border: 2px solid transparent;
+  transition: all 0.25s ease;
 }
 
-.card:hover{
-    border: 2px solid rgb(12, 11, 10);
-    transform: translateY(-4px) scale(1.04);
+.card:hover {
+  border: 2px solid rgb(12, 11, 10);
+  transform: translateY(-4px) scale(1.04);
 }
 
-.card button{
-    border: none;
-    outline: none;
-    width: 60%;
-    height: 30px;
-    border-radius: 8px;
-    background-color: red;
-    color: var(--text);
-    font-size: 1rem;
-    font-weight: 600;
-    transition: all 0.25s ease;
+.card button {
+  border: none;
+  outline: none;
+  width: 60%;
+  height: 30px;
+  border-radius: 8px;
+  background-color: red;
+  color: var(--text);
+  font-size: 1rem;
+  font-weight: 600;
+  transition: all 0.25s ease;
 }
 
-.card button:hover{
-    transform: translateY(-4px) scale(1.08);
+.card button:hover {
+  transform: translateY(-4px) scale(1.08);
 }
 
-.card .title{
-    font-size: 2rem;
-    font-weight: 600;
+.card .title {
+  font-size: 2rem;
+  font-weight: 600;
 }
 
-.card .author{
-    font-size: 1.3rem;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+.card .author {
+  font-size: 1.3rem;
+  font-family:
+    "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
 
-
-.card div{
-    display: flex;
-    gap: 20px;
-    width: 100%;
-    justify-content: center;
-    align-items: center;
+.card div {
+  display: flex;
+  gap: 20px;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
 }
 
-.card input[type="checkbox"]{
- width: 20px;
+.card input[type="checkbox"] {
+  width: 20px;
   height: 20px;
   cursor: pointer;
 }
@@ -123,112 +124,139 @@ input[type="checkbox"]:checked {
   accent-color: crimson;
 }
 
-.card .read{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 1rem;
-    width: auto;
-    height: 5vh;
-    /* background-color: rgb(23, 218, 23); */
-    background-color: rgb(243, 35, 35);
-    color: var(--text);
-    border-radius: 8px;
-    font-size: 1.2rem;
+.card .read {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  width: auto;
+  height: 5vh;
+  /* background-color: rgb(23, 218, 23); */
+  background-color: rgb(243, 35, 35);
+  color: var(--text);
+  border-radius: 8px;
+  font-size: 1.2rem;
 }
 
-footer{
-    height: auto;
-    display: flex;
-    align-items: center;
-    height: 5%;
-    justify-content: center;
-    background: var(--bg);
+footer {
+  height: auto;
+  display: flex;
+  align-items: center;
+  height: 5%;
+  justify-content: center;
+  background: var(--bg);
 }
 
-.main-container{
-    display: flex;
-    flex: 1;
-           flex-wrap: wrap;
-    gap: 20px;
-    align-items: flex-start;
+.main-container {
+  display: flex;
+  flex: 1;
+  flex-wrap: wrap;
+  gap: 20px;
+  align-items: flex-start;
 }
 
-.form-modal{
-    display: none;
-    justify-content: center;
-    align-items: center;
-    position: fixed;
-    inset: 0;
-    background: rgba(0,0,0,0.55);
+.main-container.empty {
+  justify-content: center;
+  align-items: center;
+  font-size: 3rem;
+  font-weight: 600;
 }
 
-.form-container{
-    display: flex;
-    z-index: 100;
+.form-modal {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
 }
 
-.book-form{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-   
-    align-items: center;
-    gap: 30px;
+.form-container {
+  display: flex;
+  z-index: 100;
 }
 
-.book-form .info-container{
-    display: flex;
-    gap: 20px;
-    justify-content: center;
-    align-items: center;
+.book-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  align-items: center;
+  gap: 30px;
 }
 
-
-
-.book-form label{
-    font-size: 1.6rem;
-    width: 100px;
-    text-align: right;
+.book-form .info-container {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
 }
 
-.book-form input{
-    border: 0;
-    outline: 0;
-    background-color: rgb(219, 218, 217);
-    border-radius: 8px;
-    padding: 1rem;
-    width: 350px;
-    height: 40px;
-    color: black;
+.book-form label {
+  font-size: 1.6rem;
+  width: 100px;
+  text-align: right;
+  color: black;
+  text-shadow:
+    0 0 5px #a855f7,
+    0 0 10px #a855f7,
+    0 0 20px #9333ea,
+    0 0 40px #7e22ce;
 }
 
-
-.book-form :nth-child(4) input{
-    width: 32px;
+.book-form input {
+  border: 0;
+  outline: 0;
+  background-color: rgb(219, 218, 217);
+  border-radius: 8px;
+  padding: 1rem;
+  width: 350px;
+  height: 40px;
+  color: black;
 }
 
-.book-form :nth-child(4){
-    margin-right: auto;
+.book-form :nth-child(4) input {
+  width: 32px;
 }
 
-
-.book-form button{
-    border: 0;
-    width: 150px;
-    height: 40px;
-    border-radius: 8px;
-    background-color: rgb(8, 255, 90);
-    color: var(--text);
-    font-size: 1.3rem;
-    font-weight: 700;
-    transition: all 0.25s ease;
+.book-form :nth-child(4) {
+  margin-right: auto;
 }
 
-.book-form button:hover{
-    transform: translateY(-4px) scale(1.04);
+.book-form button {
+  border: 0;
+  width: 150px;
+  height: 40px;
+  border-radius: 8px;
+  background-color: rgb(8, 255, 90);
+  color: var(--text);
+  font-size: 1.3rem;
+  font-weight: 700;
+  transition: all 0.25s ease;
+}
+
+.book-form button:hover {
+  transform: translateY(-4px) scale(1.04);
 }
 
 .form-modal.show {
-    display: flex;
+  display: flex;
+}
+
+.toast {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #333;
+  color: white;
+  padding: 12px 18px;
+  border-radius: 8px;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.3s ease;
+}
+
+.toast.show {
+  opacity: 1;
+  transform: translateY(0);
 }
