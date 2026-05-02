@@ -1,13 +1,81 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Library Web</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    
-</body>
-<script src="script.js"></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="library-container">
+      <div class="header">
+        <h3>Library System</h3>
+        <button id="addbtn">Add Book</button>
+      </div>
+      <div class="main-container">
+        <div class="card">
+          <p class="title">Book title</p>
+          <p class="author">Book author</p>
+          <p class="pages">Has this much pages</p>
+          <div>
+            <p class="read">UnRead</p>
+            <input type="checkbox" name="check" id="check-box" />
+          </div>
+          <button>remove</button>
+        </div>
+        <div class="card">
+          <p class="title">Book title</p>
+          <p class="author">Book author</p>
+          <p class="pages">Has this much pages</p>
+          <div>
+            <p class="read">Read</p>
+            <input type="checkbox" name="" id="" />
+          </div>
+          <button>remove</button>
+        </div>
+        <div class="card">
+          <p class="title">Book title</p>
+          <p class="author">Book author</p>
+          <p class="pages">Has this much pages</p>
+          <div>
+            <p class="read">Read</p>
+            <input type="checkbox" name="" id="" />
+          </div>
+          <button>remove</button>
+        </div>
+      </div>
+      <div class="form-modal">
+        <div class="form-container">
+            <form method="post" class="book-form">
+            <div class="info-container">
+                <label for="title">Title: </label>
+            <input name="title" type="text" id="title-id">
+            </div>
+
+            <div class="info-container">
+                <label for="author">Author: </label>
+            <input type="text" name="author" id="author-id">
+            </div>
+
+            <div class="info-container">
+                <label for="pages">Pages: </label>
+            <input type="text" name="pages" id="pages-id">
+            </div>
+
+            <div class="info-container">
+                <label for="read">Read:</label>
+            <input type="checkbox" name="read" id="read-id">
+            </div>
+
+            <button id="submitbtn" type="submit">Add</button>
+
+        </form>
+        </div>
+      </div>
+      <footer>
+        <p>By Wiz_Rckstr</p>
+      </footer>
+    </div>
+  </body>
+  <script src="script.js"></script>
 </html>
